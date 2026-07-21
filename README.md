@@ -17,8 +17,8 @@ This specific repo has been _slightly_ modified to be compatible with DA's live 
 2. Follow the steps.
 
 ### 2. DA sites
-Preview: https://main--hcsc-ai--dzepeda601.aem.page/
-Live: https://main--hcsc-ai--dzepeda601.aem.live/
+1. Preview: https://main--hcsc-ai--dzepeda601.aem.page/
+2. Live: https://main--hcsc-ai--dzepeda601.aem.live/
 
 ### 4. Local development
 1. Clone your new repo to your computer.
