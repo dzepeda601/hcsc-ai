@@ -16,7 +16,11 @@ This specific repo has been _slightly_ modified to be compatible with DA's live 
 1. Browse to https://da.live/start.
 2. Follow the steps.
 
-### 3. Local development
+### 2. DA sites
+Preview: https://main--hcsc-ai--dzepeda601.aem.page/
+Live: https://main--hcsc-ai--dzepeda601.aem.live/
+
+### 4. Local development
 1. Clone your new repo to your computer.
 1. Install the AEM CLI using your terminal: `sudo npm install -g @adobe/aem-cli`
 1. Start the AEM CLI: `aem up`.
