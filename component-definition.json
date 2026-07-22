@@ -56,6 +56,128 @@
       ]
     },
     {
+      "title": "HCSC Blocks",
+      "id": "hcsc-blocks",
+      "components": [
+        {
+          "title": "Hero Home",
+          "id": "hero-home",
+          "model": "hero-home",
+          "plugins": {
+            "da": {
+              "unsafeHTML": "<div class=\"hero-home\"><div><div><picture><img loading=\"lazy\"></picture></div></div><div><div><h1></h1><p></p></div></div></div>",
+              "fields": [
+                { "name": "image", "selector": "div:nth-child(1) img[src]" },
+                { "name": "imageAlt", "selector": "div:nth-child(1) img[alt]" },
+                { "name": "heading", "selector": "div:nth-child(2) h1" },
+                { "name": "text", "selector": "div:nth-child(2) p" }
+              ]
+            }
+          }
+        },
+        {
+          "title": "Content Spotlight",
+          "id": "columns-spotlight",
+          "model": "columns-spotlight",
+          "plugins": {
+            "da": {
+              "unsafeHTML": "<div class=\"columns-spotlight\"><div><div><picture><img loading=\"lazy\"></picture></div><div><h4></h4><p><a href=\"\"></a></p></div></div></div>",
+              "fields": [
+                { "name": "image", "selector": "div>div:nth-child(1) img[src]" },
+                { "name": "imageAlt", "selector": "div>div:nth-child(1) img[alt]" },
+                { "name": "heading", "selector": "div>div:nth-child(2) h4" },
+                { "name": "ctaText", "selector": "div>div:nth-child(2) p a" },
+                { "name": "ctaUrl", "selector": "div>div:nth-child(2) p a[href]" }
+              ]
+            }
+          }
+        },
+        {
+          "title": "Purpose Cards",
+          "id": "cards-purpose",
+          "model": "cards-purpose",
+          "filter": "cards-purpose",
+          "plugins": {
+            "da": {
+              "rows": 1,
+              "columns": 2
+            }
+          }
+        },
+        {
+          "title": "Purpose Card",
+          "id": "cards-purpose-card",
+          "model": "cards-purpose-card",
+          "plugins": {
+            "da": {
+              "rows": 1,
+              "columns": 2,
+              "fields": [
+                { "name": "image", "selector": "div:nth-child(1)>picture>img[src]" },
+                { "name": "imageAlt", "selector": "div:nth-child(1)>picture>img[alt]" },
+                { "name": "text", "selector": "div:nth-child(2)" }
+              ]
+            }
+          }
+        },
+        {
+          "title": "News Cards",
+          "id": "cards-news",
+          "model": "cards-news",
+          "filter": "cards-news",
+          "plugins": {
+            "da": {
+              "rows": 1,
+              "columns": 2
+            }
+          }
+        },
+        {
+          "title": "News Card",
+          "id": "cards-news-card",
+          "model": "cards-news-card",
+          "plugins": {
+            "da": {
+              "rows": 1,
+              "columns": 2,
+              "fields": [
+                { "name": "image", "selector": "div:nth-child(1)>picture>img[src]" },
+                { "name": "imageAlt", "selector": "div:nth-child(1)>picture>img[alt]" },
+                { "name": "text", "selector": "div:nth-child(2)" }
+              ]
+            }
+          }
+        },
+        {
+          "title": "Stats Carousel",
+          "id": "carousel-stats",
+          "model": "carousel-stats",
+          "filter": "carousel-stats",
+          "plugins": {
+            "da": {
+              "rows": 1,
+              "columns": 2
+            }
+          }
+        },
+        {
+          "title": "Stat",
+          "id": "carousel-stats-item",
+          "model": "carousel-stats-item",
+          "plugins": {
+            "da": {
+              "rows": 1,
+              "columns": 2,
+              "fields": [
+                { "name": "stat", "selector": "div:nth-child(2)>h3" },
+                { "name": "text", "selector": "div:nth-child(2)>p" }
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
       "title": "Blocks",
       "id": "blocks",
       "components": [

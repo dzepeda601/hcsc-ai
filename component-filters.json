@@ -16,6 +16,11 @@
       "fragment",
       "form",
       "hero",
+      "hero-home",
+      "columns-spotlight",
+      "cards-purpose",
+      "cards-news",
+      "carousel-stats",
       "image",
       "quote",
       "search",
@@ -24,6 +29,24 @@
       "text",
       "video",
       "product-recommendations"
+    ]
+  },
+  {
+    "id": "cards-purpose",
+    "components": [
+      "cards-purpose-card"
+    ]
+  },
+  {
+    "id": "cards-news",
+    "components": [
+      "cards-news-card"
+    ]
+  },
+  {
+    "id": "carousel-stats",
+    "components": [
+      "carousel-stats-item"
     ]
   },
   {
