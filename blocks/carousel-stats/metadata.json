@@ -1,0 +1,41 @@
+{
+  "variantName": "carousel-stats",
+  "baseBlock": "carousel",
+  "version": "1.0.0",
+  "created": "2026-07-21T00:00:00.000Z",
+  "sourceContext": {
+    "originUrl": "https://www.hcsc.com/",
+    "originPage": "HCSC homepage",
+    "blockPosition": "middle"
+  },
+  "visualCharacteristics": {
+    "colorScheme": "green",
+    "density": "spacious",
+    "purpose": "stats",
+    "imagePattern": "noimg"
+  },
+  "contentPattern": {
+    "structure": "per slide: large stat number (heading) + short description, no image",
+    "buttonCount": 0,
+    "imageCount": 0,
+    "hasDescription": true,
+    "textOnlySlides": true
+  },
+  "reuseGuidance": {
+    "suitableFor": [
+      "'at a glance' statistic sliders on a colored section background",
+      "rotating text-only stat/number highlights",
+      "value-proposition metric carousels with prev/next controls"
+    ],
+    "notSuitableFor": [
+      "image-led promotional galleries (use base carousel)",
+      "single non-rotating spotlight (use columns-spotlight)",
+      "tabbed or accordion content"
+    ]
+  },
+  "usage": {
+    "pagesUsing": ["/index"],
+    "reuseCount": 1,
+    "lastUsed": "2026-07-21T00:00:00.000Z"
+  }
+}

@@ -1,5 +1,14 @@
 /* stylelint-disable max-line-length */
 @font-face {
+  font-family: "Field Display";
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url('../fonts/fields-display-semibold.woff2') format('woff2'),
+       url('../fonts/fields-display-semibold.ttf') format('truetype');
+}
+
+@font-face {
   font-family: roboto-condensed;
   font-style: normal;
   font-weight: 700;

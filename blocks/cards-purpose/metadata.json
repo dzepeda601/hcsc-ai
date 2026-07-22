@@ -1,0 +1,41 @@
+{
+  "variantName": "cards-purpose",
+  "baseBlock": "cards",
+  "version": "1.0.0",
+  "created": "2026-07-21T00:00:00.000Z",
+  "sourceContext": {
+    "originUrl": "https://www.hcsc.com/",
+    "originPage": "HCSC homepage",
+    "blockPosition": "middle"
+  },
+  "visualCharacteristics": {
+    "colorScheme": "light",
+    "density": "spacious",
+    "purpose": "content-promo",
+    "imagePattern": "large"
+  },
+  "contentPattern": {
+    "structure": "per card: image + title + optional description + optional CTA",
+    "buttonCount": 1,
+    "imageCount": 1,
+    "hasDescription": true,
+    "hasCTA": true
+  },
+  "reuseGuidance": {
+    "suitableFor": [
+      "purpose / brand-value content sections on light backgrounds",
+      "image-led feature pairs with headings and optional CTA links",
+      "editorial 'what we do' highlight grids"
+    ],
+    "notSuitableFor": [
+      "compact icon callout strips",
+      "dark-background feature highlights (use cards-feature)",
+      "news/article tiles with category + date (use cards-news)"
+    ]
+  },
+  "usage": {
+    "pagesUsing": ["/index"],
+    "reuseCount": 1,
+    "lastUsed": "2026-07-21T00:00:00.000Z"
+  }
+}

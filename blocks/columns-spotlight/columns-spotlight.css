@@ -1,0 +1,91 @@
+/* columns-spotlight — content spotlight (overlay variant)
+ * Source: hcsc.com home "Measuring the Health Impact..." spotlight.
+ * Layout: large image with heading + CTA link overlaid at the bottom-left.
+ * Section background (.section.light-blue) is handled globally in styles.css. */
+
+.columns-spotlight > div {
+  position: relative;
+  display: block;
+}
+
+/* full-width image fills the block */
+.columns-spotlight > div > .columns-spotlight-img-col {
+  margin: 0;
+}
+
+.columns-spotlight > div > .columns-spotlight-img-col picture,
+.columns-spotlight > div > .columns-spotlight-img-col img {
+  display: block;
+  width: 100%;
+  object-fit: cover;
+}
+
+/* text column: overlaid on the image, bottom-left */
+.columns-spotlight > div > div:not(.columns-spotlight-img-col) {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 24px 20px 32px;
+  color: var(--hcsc-green-100);
+}
+
+.columns-spotlight h4 {
+  margin: 0;
+  max-width: 100%;
+  color: var(--hcsc-green-100);
+  font-family: var(--heading-font-family);
+  font-weight: 400;
+  font-size: var(--heading-font-size-m); /* 24px mobile / 30px desktop */
+  line-height: 1.2;
+}
+
+/* "Learn more" CTA: bold, dark green, no underline, arrow after */
+.columns-spotlight .button-container {
+  margin: 0;
+}
+
+.columns-spotlight a.button:any-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--hcsc-green-100);
+  font-weight: 700;
+  font-size: var(--body-font-size-m);
+  text-decoration: none;
+}
+
+.columns-spotlight a.button:hover,
+.columns-spotlight a.button:focus {
+  color: var(--hcsc-purple);
+  text-decoration: none;
+}
+
+.columns-spotlight a.button::after {
+  content: '';
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  background-color: currentcolor;
+  mask: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6" fill="none" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>') no-repeat center / contain;
+  transition: transform 0.2s ease;
+}
+
+.columns-spotlight a.button:hover::after {
+  transform: translateX(4px);
+}
+
+@media (width >= 900px) {
+  .columns-spotlight h4 {
+    max-width: 32%;
+  }
+
+  /* overlay the text at the bottom-left of the image */
+  .columns-spotlight > div > div:not(.columns-spotlight-img-col) {
+    position: absolute;
+    inset: auto 47px 0;
+    max-width: var(--site-content-width);
+    margin: 0 auto;
+    padding: 48px 25px 72px;
+    z-index: 1;
+  }
+}

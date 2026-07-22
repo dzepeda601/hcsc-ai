@@ -1,0 +1,138 @@
+/* cards-news -- HCSC "News & Insights" article list.
+   Values from source computed styles (www.hcsc.com). Decorated DOM:
+   .cards-news > ul > li > .cards-news-card-image (picture) + .cards-news-card-body (p, p, h3>a) */
+
+.cards-news > ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: block;
+}
+
+/* each article row: thin top-border separator (source uses rgb(196,206,206) == --hcsc-green-20) */
+.cards-news > ul > li {
+  border-top: 1px solid var(--hcsc-green-20);
+  background-color: transparent;
+}
+
+/* source hides the thumbnail at desktop; the news list is a text-only horizontal layout.
+   keep the image visible on mobile stacked view, hidden on desktop (see media query). */
+.cards-news .cards-news-card-image {
+  line-height: 0;
+  margin: 0 0 16px;
+}
+
+.cards-news .cards-news-card-image img {
+  width: 100%;
+  object-fit: cover;
+}
+
+/* card body: category + date + headline */
+.cards-news .cards-news-card-body {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 4px;
+  padding: 24px 0;
+}
+
+/* category label (first paragraph): bold */
+.cards-news .cards-news-card-body p:first-child {
+  margin: 0;
+  font-family: var(--body-font-family);
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 24px;
+  color: var(--hcsc-green-100);
+}
+
+/* date (second paragraph): uppercase */
+.cards-news .cards-news-card-body p:nth-child(2) {
+  margin: 0;
+  font-family: var(--body-font-family);
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  text-transform: uppercase;
+  color: var(--hcsc-green-100);
+}
+
+/* headline -- source uses the body font (Open Sans 600), not the display heading font */
+.cards-news .cards-news-card-body h3 {
+  margin: 4px 0 0;
+  font-family: var(--body-font-family);
+  font-size: 28px;
+  font-weight: 600;
+  line-height: 1.2;
+  color: var(--hcsc-green-100);
+}
+
+.cards-news .cards-news-card-body h3 a:any-link {
+  display: inline;
+  color: var(--hcsc-green-100);
+  text-decoration: none;
+}
+
+.cards-news .cards-news-card-body h3 a:hover {
+  color: var(--hcsc-purple);
+  text-decoration: underline;
+}
+
+/* trailing "read more" arrow after each headline (source shows a decorative
+   right-arrow glyph inline after the h3 link). Same line-arrow mask + hover
+   shift used by columns-spotlight / cards-purpose CTAs, sized to sit inline. */
+.cards-news .cards-news-card-body h3 a:any-link::after {
+  content: '';
+  display: inline-block;
+  width: 22px;
+  height: 22px;
+  margin-left: 8px;
+  vertical-align: -4px;
+  background-color: currentcolor;
+  mask: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6" fill="none" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>') no-repeat center / contain;
+  transition: transform 0.2s ease;
+}
+
+.cards-news .cards-news-card-body h3 a:hover::after {
+  transform: translateX(4px);
+}
+
+@media (width >= 900px) {
+  /* desktop: hide thumbnail, lay out as [category/date | headline] grid */
+  .cards-news .cards-news-card-image {
+    display: none;
+  }
+
+  .cards-news > ul > li {
+    display: block;
+  }
+
+  .cards-news .cards-news-card-body {
+    grid-template-columns: 200px 1fr;
+    column-gap: 134px;
+    align-items: center;
+    padding: 32px 25px;
+  }
+
+  /* left column: category (row 1) + date (row 2) */
+  .cards-news .cards-news-card-body p:first-child {
+    grid-column: 1;
+    grid-row: 1;
+    align-self: end;
+  }
+
+  .cards-news .cards-news-card-body p:nth-child(2) {
+    grid-column: 1;
+    grid-row: 2;
+    align-self: start;
+  }
+
+  /* right column: headline spans both rows */
+  .cards-news .cards-news-card-body h3 {
+    grid-column: 2;
+    grid-row: 1 / span 2;
+    margin: 0;
+    font-size: 36px;
+    line-height: 1.2;
+    align-self: center;
+  }
+}

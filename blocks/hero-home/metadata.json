@@ -1,0 +1,38 @@
+{
+  "variantName": "hero-home",
+  "baseBlock": "hero",
+  "version": "1.0.0",
+  "created": "2026-07-21T00:00:00.000Z",
+  "sourceContext": {
+    "originUrl": "https://www.hcsc.com/",
+    "originPage": "HCSC homepage",
+    "blockPosition": "top"
+  },
+  "visualCharacteristics": {
+    "colorScheme": "light",
+    "density": "spacious",
+    "purpose": "hero",
+    "imagePattern": "large"
+  },
+  "contentPattern": {
+    "structure": "background image + title + subheading",
+    "buttonCount": 0,
+    "imageCount": 1
+  },
+  "reuseGuidance": {
+    "suitableFor": [
+      "homepage top banners on light backgrounds",
+      "full-bleed background photo with headline + supporting copy, no CTA",
+      "brand intro heroes without a call-to-action"
+    ],
+    "notSuitableFor": [
+      "dark-themed heroes with a single prominent CTA (use hero-banner)",
+      "text-only intros without a background image"
+    ]
+  },
+  "usage": {
+    "pagesUsing": ["/index"],
+    "reuseCount": 1,
+    "lastUsed": "2026-07-21T00:00:00.000Z"
+  }
+}

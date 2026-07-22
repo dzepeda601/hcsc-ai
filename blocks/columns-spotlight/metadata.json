@@ -1,0 +1,40 @@
+{
+  "variantName": "columns-spotlight",
+  "baseBlock": "columns",
+  "version": "1.0.0",
+  "created": "2026-07-21T00:00:00.000Z",
+  "sourceContext": {
+    "originUrl": "https://www.hcsc.com/",
+    "originPage": "HCSC homepage",
+    "blockPosition": "middle"
+  },
+  "visualCharacteristics": {
+    "colorScheme": "light-blue",
+    "density": "spacious",
+    "purpose": "content-spotlight",
+    "imagePattern": "large"
+  },
+  "contentPattern": {
+    "structure": "two columns: large feature image | heading + single CTA link",
+    "buttonCount": 1,
+    "imageCount": 1,
+    "columnCount": 2
+  },
+  "reuseGuidance": {
+    "suitableFor": [
+      "single image + heading + CTA spotlight sections",
+      "editorial feature callouts on a colored section background",
+      "balanced two-column image/text promo units"
+    ],
+    "notSuitableFor": [
+      "repeating multi-item grids (use cards variants)",
+      "text-only side-by-side comparisons",
+      "hero banners at the top of a page"
+    ]
+  },
+  "usage": {
+    "pagesUsing": ["/index"],
+    "reuseCount": 1,
+    "lastUsed": "2026-07-21T00:00:00.000Z"
+  }
+}

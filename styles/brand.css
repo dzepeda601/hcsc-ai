@@ -1,0 +1,43 @@
+/* HCSC Brand Design Tokens */
+
+:root {
+  /* brand palette */
+  --hcsc-green-100: #033;
+  --hcsc-green-90: #194747;
+  --hcsc-green-80: #315a5a;
+  --hcsc-green-70: #4a6e6e;
+  --hcsc-green-60: #628181;
+  --hcsc-green-30: #acbbbb;
+  --hcsc-green-20: #c4cece;
+  --hcsc-green-10: #dde2e2;
+  --hcsc-green-5: #f3f5f5;
+  --hcsc-light-blue-100: #90cbff;
+  --hcsc-light-blue-5: #eff2f5;
+  --hcsc-blue: #007cbf;
+  --hcsc-purple: #639;
+  --hcsc-orange: #f16022;
+  --hcsc-yellow: #ffeb00;
+  --hcsc-pink: #f9c;
+  --hcsc-white: #fff;
+  --hcsc-black: #000;
+
+  /* semantic colors */
+  --background-color: var(--hcsc-white);
+  --light-color: var(--hcsc-green-5);
+  --dark-color: var(--hcsc-green-100);
+  --text-color: var(--hcsc-green-100);
+  --link-color: var(--hcsc-green-100);
+  --link-hover-color: var(--hcsc-purple);
+
+  /* section background variants */
+  --section-light-blue-bg: var(--hcsc-light-blue-100);
+  --section-green-bg: var(--hcsc-green-100);
+
+  /* fonts */
+  --heading-font-family: "Field Display", "Open Sans", arial, helvetica, sans-serif;
+  --body-font-family: "Open Sans", arial, helvetica, sans-serif;
+
+  /* spacing */
+  --site-content-width: 1346px;
+  --nav-height: 100px;
+}

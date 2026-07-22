@@ -1,0 +1,151 @@
+/* carousel-stats -- HCSC "at a Glance" value-prop stats carousel.
+ * Values extracted from source computed styles (hcsc.com).
+ * Section background is dark green (handled globally by .section.green);
+ * headings/text render white via global .section.green rules. */
+
+.carousel-stats {
+  position: relative;
+}
+
+/* --- Slides track: one stat per slide, full width --- */
+.carousel-stats .carousel-stats-slides-container {
+  position: relative;
+}
+
+.carousel-stats .carousel-stats-slides {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  scroll-behavior: smooth;
+  scroll-snap-type: x mandatory;
+  overflow: scroll clip;
+}
+
+.carousel-stats .carousel-stats-slides::-webkit-scrollbar {
+  display: none;
+}
+
+.carousel-stats .carousel-stats-slide {
+  flex: 0 0 100%;
+  scroll-snap-align: start;
+  min-height: 315px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+
+/* Empty first cell from authored table -- not used */
+.carousel-stats .carousel-stats-slide-image {
+  display: none;
+}
+
+.carousel-stats .carousel-stats-slide-content {
+  width: 100%;
+}
+
+/* --- Stat number (authored as h3) --- */
+
+/* Selector is scoped under main .section.green to beat the global
+   `.section.green h3 { color: white }` rule. */
+main .section.green .carousel-stats .carousel-stats-slide-content h3 {
+  margin: 0;
+  font-family: var(--heading-font-family);
+  font-weight: 400;
+  font-size: 120px;
+  line-height: 1;
+  color: var(--hcsc-light-blue-100);
+}
+
+/* --- Description paragraph --- */
+.carousel-stats .carousel-stats-slide-content p {
+  max-width: 440px;
+  margin: 16px 0 0;
+  font-family: var(--body-font-family);
+  font-weight: 400;
+  font-size: var(--body-font-size-m);
+  line-height: 1.5;
+  color: var(--hcsc-white);
+}
+
+/* --- Hide dot indicators (source has none) --- */
+.carousel-stats .carousel-stats-slide-indicators,
+.carousel-stats nav[aria-label] {
+  display: none;
+}
+
+/* --- Prev/next arrows: pill container, bottom-right --- */
+.carousel-stats .carousel-stats-navigation-buttons {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  width: 100px;
+  height: 52px;
+  padding: 8px;
+  border: 1px solid var(--hcsc-green-60);
+  border-radius: 50px;
+  background-color: transparent;
+}
+
+.carousel-stats .carousel-stats-navigation-buttons button {
+  position: relative;
+  width: 34px;
+  height: 34px;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  border-radius: 50%;
+  background-color: transparent;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.carousel-stats .carousel-stats-navigation-buttons button:hover,
+.carousel-stats .carousel-stats-navigation-buttons button:focus-visible {
+  background-color: rgb(255 255 255 / 12%);
+}
+
+/* Chevron glyphs drawn with borders, dark-green stroke */
+.carousel-stats .carousel-stats-navigation-buttons button::after {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 9px;
+  height: 9px;
+  border: 2px solid var(--hcsc-green-100);
+  border-bottom: 0;
+  border-left: 0;
+  transform: translate(-50%, -50%) rotate(-135deg);
+}
+
+.carousel-stats .carousel-stats-navigation-buttons button.slide-next::after {
+  transform: translate(-50%, -50%) rotate(45deg);
+}
+
+.carousel-stats .carousel-stats-navigation-buttons button:disabled {
+  cursor: default;
+  opacity: 0.4;
+}
+
+/* --- Desktop --- */
+@media (width >= 900px) {
+  .carousel-stats .carousel-stats-slide {
+    min-height: 315px;
+  }
+
+  main .section.green .carousel-stats .carousel-stats-slide-content h3 {
+    font-size: 225px;
+  }
+
+  .carousel-stats .carousel-stats-slide-content p {
+    font-size: 20px;
+    line-height: 30px;
+  }
+}

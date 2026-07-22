@@ -1,0 +1,110 @@
+/* hero-home -- HCSC homepage hero banner
+   Values extracted from source computed styles (www.hcsc.com).
+   Full-bleed dark-green banner: light-blue headline + white copy on the left,
+   full-height photo on the right.
+
+   Authored structure = two rows (each a direct child div of the block):
+     row 1 -> image cell (picture)
+     row 2 -> text cell (h1 + p)
+*/
+
+/* Break out of the section's max-width container so the banner is full-bleed. */
+.hero-home-container .hero-home-wrapper {
+  max-width: 100%;
+  padding: 0;
+}
+
+.hero-home.block {
+  position: relative;
+  display: flex;
+  flex-direction: column-reverse; /* mobile: text above image */
+  background-color: var(--hcsc-green-100);
+  overflow: hidden;
+}
+
+/* Rows behave as full-width columns */
+.hero-home.block > div {
+  margin: 0;
+}
+
+/* Image row */
+.hero-home .hero-home-image,
+.hero-home > div:first-child {
+  line-height: 0;
+}
+
+.hero-home picture {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.hero-home img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  max-width: none;
+  object-fit: cover;
+}
+
+/* Text row */
+.hero-home > div:last-child {
+  box-sizing: border-box;
+  padding: 40px 25px;
+}
+
+.hero-home h1 {
+  margin: 0;
+  color: var(--hcsc-light-blue-100);
+  font-family: var(--heading-font-family);
+  font-weight: 600;
+  font-size: 48px;
+  line-height: 1;
+}
+
+.hero-home p {
+  margin: 24px 0 0;
+  max-width: 34ch;
+  color: var(--hcsc-white);
+  font-family: var(--body-font-family);
+  font-size: 20px;
+  line-height: 30px;
+}
+
+@media (width >= 900px) {
+  .hero-home.block {
+    flex-direction: row;
+    align-items: stretch;
+    min-height: 620px;
+  }
+
+  /* Image row -> right column (~65%) */
+  .hero-home > div:first-child {
+    order: 2;
+    flex: 1 1 65%;
+    min-width: 0;
+
+    /* Curved "swoop" edge: mask carves the left side of the photo so the
+       dark-green panel curves into the image, matching the source. */
+    mask: url('hero-clip.svg') no-repeat 100% 0% / 100% 100%;
+  }
+
+  /* Text row -> left column (~35%) */
+  .hero-home > div:last-child {
+    order: 1;
+    flex: 0 0 38%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 60px 40px 87px 72px;
+  }
+
+  .hero-home h1 {
+    font-size: 88px;
+    line-height: 88px;
+  }
+
+  .hero-home p {
+    margin-top: 32px;
+  }
+}

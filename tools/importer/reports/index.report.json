@@ -1,0 +1,15 @@
+{
+  "status": "success",
+  "url": "https://www.hcsc.com/",
+  "path": "index",
+  "timestamp": "2026-07-21T22:32:23.979Z",
+  "title": "Health Care Service Corporation | Health Care Service Corporation",
+  "template": "homepage",
+  "blocks": [
+    "hero-home",
+    "cards-purpose",
+    "columns-spotlight",
+    "carousel-stats",
+    "cards-news"
+  ]
+}

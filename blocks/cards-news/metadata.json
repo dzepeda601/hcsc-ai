@@ -1,0 +1,42 @@
+{
+  "variantName": "cards-news",
+  "baseBlock": "cards",
+  "version": "1.0.0",
+  "created": "2026-07-21T00:00:00.000Z",
+  "sourceContext": {
+    "originUrl": "https://www.hcsc.com/",
+    "originPage": "HCSC homepage",
+    "blockPosition": "bottom"
+  },
+  "visualCharacteristics": {
+    "colorScheme": "light",
+    "density": "spacious",
+    "purpose": "news-tiles",
+    "imagePattern": "large"
+  },
+  "contentPattern": {
+    "structure": "per card: category tag + date + linked title + thumbnail image",
+    "buttonCount": 0,
+    "imageCount": 1,
+    "hasDescription": false,
+    "hasCTA": true,
+    "wholeCardLinked": true
+  },
+  "reuseGuidance": {
+    "suitableFor": [
+      "news / press-release / article listing grids",
+      "cards with category tag + date metadata + linked title + thumbnail",
+      "editorial 'latest insights' sections where the whole card is a link"
+    ],
+    "notSuitableFor": [
+      "promotional cards with body copy and separate CTA buttons (use cards-promo/cards-purpose)",
+      "icon callout strips",
+      "simple navigation tile grids without metadata"
+    ]
+  },
+  "usage": {
+    "pagesUsing": ["/index"],
+    "reuseCount": 1,
+    "lastUsed": "2026-07-21T00:00:00.000Z"
+  }
+}

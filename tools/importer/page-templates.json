@@ -1,0 +1,122 @@
+{
+  "metadata": {
+    "projectType": "da"
+  },
+  "templates": [
+    {
+      "name": "homepage",
+      "urls": [
+        "https://www.hcsc.com/"
+      ],
+      "representativeUrl": "https://www.hcsc.com/",
+      "coverageGaps": [],
+      "description": "HCSC corporate homepage with hero banner, content block, content spotlight, value-prop stats carousel, and news/insights article list",
+      "blocks": [
+        {
+          "name": "hero-home",
+          "instances": [
+            "#main-content .herobanner section.comp-hero-banner"
+          ]
+        },
+        {
+          "name": "cards-purpose",
+          "instances": [
+            "#main-content .content-block .comp-content-block__grid-container"
+          ]
+        },
+        {
+          "name": "columns-spotlight",
+          "instances": [
+            "#main-content .contentspotlight section.comp-content-spotlight"
+          ]
+        },
+        {
+          "name": "carousel-stats",
+          "instances": [
+            "#main-content .section .comp-value-prop__carousel-container"
+          ]
+        },
+        {
+          "name": "cards-news",
+          "instances": [
+            "#main-content .articlelist .comp-article-list__articles-container"
+          ]
+        },
+        {
+          "name": "section-content-spotlight",
+          "instances": [
+            "#main-content > div.aem-Grid.aem-Grid--12.aem-Grid--default--12 > div.contentspotlight.styles__background--light-blue-100.aem-GridColumn.aem-GridColumn--default--12"
+          ],
+          "section": "light-blue"
+        },
+        {
+          "name": "section-value-prop-carousel",
+          "instances": [
+            "#main-content > div.aem-Grid.aem-Grid--12.aem-Grid--default--12 > div.section.styles__background--green-100.aem-GridColumn.aem-GridColumn--default--12"
+          ],
+          "section": "green"
+        }
+      ],
+      "sections": [
+        {
+          "id": "rc2",
+          "name": "hero",
+          "selector": "#main-content > div.aem-Grid.aem-Grid--12.aem-Grid--default--12 > div.herobanner.styles__background--light-blue-100.aem-GridColumn.aem-GridColumn--default--12",
+          "style": null,
+          "blocks": [
+            "hero-home"
+          ],
+          "defaultContent": []
+        },
+        {
+          "id": "rc3",
+          "name": "content-block",
+          "selector": "#main-content > div.aem-Grid.aem-Grid--12.aem-Grid--default--12 > div.content-block.aem-GridColumn.aem-GridColumn--default--12",
+          "style": null,
+          "blocks": [
+            "cards-purpose"
+          ],
+          "defaultContent": [
+            "#main-content .content-block .comp-content-block__header"
+          ]
+        },
+        {
+          "id": "rc4",
+          "name": "content-spotlight",
+          "selector": "#main-content > div.aem-Grid.aem-Grid--12.aem-Grid--default--12 > div.contentspotlight.styles__background--light-blue-100.aem-GridColumn.aem-GridColumn--default--12",
+          "style": "light-blue",
+          "blocks": [
+            "columns-spotlight"
+          ],
+          "defaultContent": []
+        },
+        {
+          "id": "rc5",
+          "name": "value-prop-carousel",
+          "selector": "#main-content > div.aem-Grid.aem-Grid--12.aem-Grid--default--12 > div.section.styles__background--green-100.aem-GridColumn.aem-GridColumn--default--12",
+          "style": "green",
+          "blocks": [
+            "carousel-stats"
+          ],
+          "defaultContent": [
+            "#main-content .section .comp-value-prop .comp-value-prop__eyebrow"
+          ]
+        },
+        {
+          "id": "rc6",
+          "name": "article-list",
+          "selector": "#main-content > div.aem-Grid.aem-Grid--12.aem-Grid--default--12 > div.articlelist.aem-GridColumn.aem-GridColumn--default--12",
+          "style": null,
+          "blocks": [
+            "cards-news"
+          ],
+          "defaultContent": [
+            "#main-content .articlelist .comp-article-list__eyebrow",
+            "#main-content .articlelist .comp-article-list__headline",
+            "#main-content .articlelist .comp-article-list__cta-container"
+          ]
+        }
+      ]
+    }
+  ]
+}

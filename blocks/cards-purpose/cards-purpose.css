@@ -1,0 +1,152 @@
+/* cards-purpose -- HCSC "Guided by Purpose" content block
+   Values extracted from source computed styles (www.hcsc.com content-block).
+   Structure (decorated): .cards-purpose > ul > li > (.cards-purpose-card-image + .cards-purpose-card-body) */
+
+.cards-purpose > ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 48px;
+}
+
+/* each card: image over text on mobile */
+.cards-purpose > ul > li {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  background: none;
+  border: none;
+}
+
+.cards-purpose .cards-purpose-card-image {
+  line-height: 0;
+}
+
+.cards-purpose .cards-purpose-card-image img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+/* first card image carries the organic curve baked into the source JPEG -- no radius */
+.cards-purpose > ul > li:first-child .cards-purpose-card-image img {
+  border-radius: 0;
+}
+
+/* second (small) card image is a rounded square */
+.cards-purpose > ul > li:nth-child(2) .cards-purpose-card-image img {
+  border-radius: 20px;
+}
+
+.cards-purpose .cards-purpose-card-body {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.cards-purpose .cards-purpose-card-body h4 {
+  margin: 0;
+  font-family: var(--heading-font-family);
+  font-weight: 600;
+  font-size: var(--heading-font-size-m); /* 30px desktop / 24px mobile */
+  line-height: 1.2;
+  color: var(--hcsc-green-100);
+}
+
+.cards-purpose .cards-purpose-card-body p {
+  margin: 16px 0 0;
+  font-family: var(--body-font-family);
+  font-size: var(--body-font-size-m); /* 16px */
+  line-height: 1.5;
+  color: var(--hcsc-green-100);
+}
+
+/* CTA: uppercase bold link with circular arrow (source a.comp-cta) */
+.cards-purpose .cards-purpose-card-body p.button-container {
+  margin: 24px 0 0;
+}
+
+.cards-purpose .cards-purpose-card-body a.button:any-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  margin: 0;
+  padding: 0;
+  border: none;
+  border-radius: 0;
+  background: none;
+  font-family: var(--body-font-family);
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 1;
+  letter-spacing: 0.48px;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: var(--hcsc-green-100);
+}
+
+.cards-purpose .cards-purpose-card-body a.button::after {
+  content: '';
+  display: inline-block;
+  flex: 0 0 auto;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background-color: var(--hcsc-green-100);
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='14' height='14' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'><line x1='4' y1='12' x2='19' y2='12'/><polyline points='13 6 19 12 13 18'/></svg>");
+  background-repeat: no-repeat;
+  background-position: center;
+  transition: background-color 0.2s ease;
+}
+
+.cards-purpose .cards-purpose-card-body a.button:hover,
+.cards-purpose .cards-purpose-card-body a.button:focus {
+  color: var(--hcsc-purple);
+  background: none;
+  text-decoration: none;
+}
+
+.cards-purpose .cards-purpose-card-body a.button:hover::after,
+.cards-purpose .cards-purpose-card-body a.button:focus::after {
+  background-color: var(--hcsc-purple);
+}
+
+/* Desktop: image + text side by side, two-column editorial layout */
+@media (width >= 900px) {
+  .cards-purpose > ul {
+    gap: 80px;
+  }
+
+  .cards-purpose > ul > li {
+    flex-direction: row;
+    align-items: center;
+    gap: 64px;
+  }
+
+  /* first card: large image ~ half width */
+  .cards-purpose > ul > li:first-child .cards-purpose-card-image {
+    flex: 0 0 50%;
+    max-width: 50%;
+  }
+
+  .cards-purpose > ul > li:first-child .cards-purpose-card-body {
+    flex: 1 1 auto;
+  }
+
+  /* second card: smaller square image */
+  .cards-purpose > ul > li:nth-child(2) .cards-purpose-card-image {
+    flex: 0 0 300px;
+    max-width: 300px;
+  }
+
+  .cards-purpose > ul > li:nth-child(2) .cards-purpose-card-body {
+    flex: 1 1 auto;
+  }
+
+  .cards-purpose .cards-purpose-card-body h4 {
+    font-size: var(--heading-font-size-m); /* 30px desktop */
+    line-height: 1.2;
+  }
+}

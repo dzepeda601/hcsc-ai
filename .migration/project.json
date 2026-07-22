@@ -1,0 +1,10 @@
+{
+  "type": "da",
+  "sites": {
+    "hcsc-ai": {
+      "previewOrg": "dzepeda601",
+      "previewSite": "hcsc-ai",
+      "libraryUrl": "https://main--sta-boilerplate--aemdemos.aem.page/tools/sidekick/library.json"
+    }
+  }
+}
