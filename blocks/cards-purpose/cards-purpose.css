@@ -30,9 +30,10 @@
   object-fit: cover;
 }
 
-/* first card image carries the organic curve baked into the source JPEG -- no radius */
+/* first card image: organic blob shape via SVG mask (matches source content-block-clip.svg) */
 .cards-purpose > ul > li:first-child .cards-purpose-card-image img {
   border-radius: 0;
+  mask: url('content-block-clip.svg') no-repeat 0% 0% / contain;
 }
 
 /* second (small) card image is a rounded square */
