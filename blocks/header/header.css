@@ -290,10 +290,9 @@ header nav .nav-back {
     transform: rotate(-45deg);
   }
 
-  header nav .nav-utility ul {
-    justify-content: center;
-    gap: 20px;
-    padding: 8px 16px;
+  /* utility bar hidden on mobile; its links are relocated into the drawer */
+  header nav .nav-utility {
+    display: none;
   }
 
   header nav .nav-main {
