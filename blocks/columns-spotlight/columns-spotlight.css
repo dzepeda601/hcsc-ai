@@ -79,6 +79,12 @@
     max-width: 32%;
   }
 
+  /* Curved "swoop" edge: mask carves the bottom-left of the photo so the
+     light-blue section background curves into the image, matching the source. */
+  .columns-spotlight > div > .columns-spotlight-img-col {
+    mask: url('spotlight-clip.svg') no-repeat 0% 0% / cover;
+  }
+
   /* overlay the text at the bottom-left of the image */
   .columns-spotlight > div > div:not(.columns-spotlight-img-col) {
     position: absolute;
