@@ -163,11 +163,17 @@ function addMobileBackButtons(navSections) {
  */
 export default async function decorate(block) {
   const navMeta = getMetadata('nav');
-  const navPath = navMeta ? new URL(navMeta, window.location).pathname : '/content/nav';
+  const candidates = [];
+  if (navMeta) candidates.push(`${new URL(navMeta, window.location).pathname}.plain.html`);
+  candidates.push('/content/nav.plain.html', '/nav.plain.html');
 
-  let resp = await fetch('/content/nav.plain.html');
-  if (!resp.ok) resp = await fetch(`${navPath}.plain.html`);
-  if (!resp.ok) return;
+  let resp = null;
+  for (let i = 0; i < candidates.length; i += 1) {
+    // eslint-disable-next-line no-await-in-loop
+    const r = await fetch(candidates[i]);
+    if (r.ok) { resp = r; break; }
+  }
+  if (!resp) return;
   const html = await resp.text();
 
   const fragment = document.createElement('div');
